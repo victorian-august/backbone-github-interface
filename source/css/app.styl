@@ -1,0 +1,192 @@
+@import 'nib'
+
+html, body
+  height 100%
+
+h2
+  color #666 !important
+  margin-bottom 20px !important
+
+header, footer
+  background-color #f5f5f5
+
+header
+  border-bottom #e5e5e5 1px solid
+  padding 20px 40px
+
+header p
+  font-size 34px
+
+header span
+  background url(../img/ajax-loader.gif) no-repeat 0 0
+  content ''
+  display none
+  height 15px
+  position absolute
+  width 128px
+  margin-top -15px
+  margin-left 118px
+
+#container
+  min-height 100%
+  height auto !important
+  height 100%
+  margin 0 auto -25px
+  width 100%
+
+form
+  max-width 400px
+  padding 15px
+  margin 0 auto
+
+button
+  padding 10px 12px !important
+
+#message p
+  margin 0 auto
+  margin-bottom 60px
+  max-width 370px
+  text-align center
+
+
+#issues
+  display none
+  margin 0 auto
+  padding-bottom 60px
+
+#push, footer
+  height 25px
+
+footer
+  line-height 25px
+  text-align right
+
+footer p
+  font-size 10px
+  margin 0
+
+/* Table */
+.table-list
+  display table
+  table-layout fixed
+  width 100%
+  color #999
+  border-bottom 1px solid #e5e5e5
+  padding 0
+
+.table-list-bordered .table-list-cell:first-child
+  border-left 1px solid #eee
+
+.table-list-bordered .table-list-cell:last-child
+  border-right 1px solid #eee
+
+.table-list-item
+  position relative
+  list-style none
+  display table-row
+
+.table-list-cell
+  position relative
+  display table-cell
+  padding 8px 10px
+  font-size 12px
+  vertical-align middle
+  border-top 1px solid #eee
+
+.table-list-cell.flush-left
+  padding-left 0
+
+.table-list-cell.flush-right
+  padding-right 0
+
+.table-list-cell-avatar
+  padding-left 0
+  padding-right 0
+  width 16px
+
+.table-list-header
+  display table
+  font-size 13px
+  font-weight 600
+  color #222
+  table-layout fixed
+  position relative
+  margin-top 20px
+  margin-bottom -1px
+  background-color #f8f8f8
+  border 1px solid #e5e5e5
+  border-radius 3px 3px 0 0
+
+.table-list-header:before
+  display table
+  content ''
+
+.table-list-header:after
+  display table
+  clear both
+  content ''
+
+.table-list-header .table-list-cell
+  border 0 none
+
+.table-list-header.number
+.table-list-cell.number
+  width 10%
+
+.table-list-header.title
+.table-list-cell.title
+  width 75%
+
+.table-list-header.created
+.table-list-cell.created
+  width 15%
+
+.table-list-item .table-list-cell.title
+  font-size 15px
+  font-weight bold
+  color #333
+
+#pre-wrapper
+  border-bottom 1px solid #eee
+
+.home-icon
+.repo-icon
+  margin-right 10px
+
+.home-icon span:before
+.repo-icon:before
+  content ''
+  display inline-block
+  vertical-align bottom
+  height 32px
+  width 32px
+
+.home-icon span:before
+  background url(../img/home.png) no-repeat 0 0
+
+.home-icon:hover span:before
+  background url(../img/home-hover.png) no-repeat 0 0
+  cursor pointer
+
+.repo-icon:before
+  background url(../img/folder.png) no-repeat 0 0
+
+.repo-owner:before
+  content ':'
+  padding-right 8px
+
+.path-divider
+  margin: 0 0.25em
+
+/* Validation */
+.has-error input::-webkit-input-placeholder
+  color #a94442
+
+.has-error input::-moz-placeholder
+  color #a94442
+
+.has-error input:-moz-placeholder
+  color #a94442
+
+.has-error input:-ms-input-placeholder
+  color #a94442

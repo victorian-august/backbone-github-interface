@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        title GitHub Interface
+        link(rel='stylesheet', type='text/css', href='css/app.css')
+        link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='css/jquery-ui.css')
+        script(src='js/jquery.js')
+        script(src='js/jquery-ui.js')
+        script(src='js/underscore.js')
+        script(src='js/backbone-min.js')
+        script(src='js/backbone-validation-min.js')
+        script(src='js/bootstrap.min.js')
+        script(src='js/app.js')
+        script(src='//localhost:35729/livereload.js')
+    body
+        #container
+            header
+                div(class='container')
+                    p GitHub Interface
+                    span
+            include partials/content
+        footer
+            p(class='container') @ 2015 GitHub Interface by Viktor Yasinefta
+        <!-- Templates -->
+        script(type='text/template', style='display:none')#issue-template
+            li(class='table-list-item')
+                div(class='table-list-cell number') #<%= number %>
+                div(class='table-list-cell title') <%= title %>
+                div(class='table-list-cell created') <%= created_at %>
+        script(type='text/template', style='display:none')#current-repository
+            #pre-wrapper
+                h3(class='current-repository container')
+                    a(class='home-icon' href='/' title="Go to home")
+                        span
+                    span(class='repo-icon' title='You are here')
+                    span(class='repo-owner')
+                        |<a href='<%= href_owner %>' target='_blank'><%= owner %></a>
+                    span(class='path-divider') /
+                    span(class='repo-title')
+                        | <a href='<%= href_repository %>' target='_blank'><%= repository %></a>
+        script(type='text/template', style='display:none')#message-template
+            #message
+                <% if (type == 'warning') %>
+                p(class='alert alert-warning') Warning! No issues found in this repository.<br/>Choose other and try again.
+                <% else %>
+                p(class='alert alert-danger') Error! Repository not found.<br/>Check input data and try again.

@@ -1,0 +1,17 @@
+#wrapper(class='container')
+    form(id='formOwner', name='getData')
+        h2 Please, type data &hellip;
+        div(class='form-group')
+            input(id='inputOwner', name='owner', class='form-control', type='text', placeholder='GitHub Owner (e.g. twbs)', title='Input owner of repository on GitHub')
+            span(class='help-block hidden')
+        div(class='form-group')
+            input(id='inputRepository', name='repository', class='form-control', type='text', placeholder='GitHub Repository (e.g. bootstrap)', title='Input name of repository on GitHub')
+            span(class='help-block hidden')
+        button(id='authButton' class='btn btn-block btn-lg btn-primary', type='button', data-text-loading='Loading...') Search
+    #issues
+        div(class='table-list table-list-header')
+            div(class='table-list-cell number') Number
+            div(class='table-list-cell title') Title
+            div(class='table-list-cell created') Created at
+        ul(class='table-list table-list-bordered table-list-issues')
+    #push
